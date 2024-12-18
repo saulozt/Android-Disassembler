@@ -9,26 +9,36 @@ updates:
     ignore:
       - dependency-name: "org.jetbrains.kotlin:kotlin-stdlib-jdk7"
         versions:
-          - "1.4.32"
+          - "2.1.0"
       - dependency-name: "com.google.android.gms:play-services-ads"
         versions:
-          - "20.0.0"
+          - "22.4.0"
       - dependency-name: "com.mikepenz:aboutlibraries"
         versions:
-          - "8.6.9"
-          - "8.7.1"
-          - "8.8.4"
+          - "8.9.4"
       - dependency-name: "org.jetbrains.kotlin:kotlin-stdlib-jdk8"
         versions:
-          - "1.4.32"
+          - "2.1.0"
       - dependency-name: "com.mikepenz.aboutlibraries.plugin:aboutlibraries-plugin"
         versions:
-          - "8.6.9"
-          - "8.7.1"
-          - "8.8.3"
+          - "8.9.4"
       - dependency-name: "org.jetbrains.kotlinx:kotlinx-coroutines-core"
         versions:
-          - "1.4.2-native-mt"
+          - "1.7.3"
       - dependency-name: "org.jetbrains.kotlinx:kotlinx-coroutines-android"
         versions:
-          - "1.4.2-native-mt"
+          - "1.7.3"
+
+jobs:
+  build:
+    runs-on: ubuntu-24.04
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+      - name: Set up JDK
+        uses: actions/setup-java@v1
+        with:
+          java-version: 17
+      - name: Build with Gradle
+        run: ./gradlew build
