@@ -72,7 +72,7 @@ android {
         }
     }
 
-    ndkVersion "28.0.6117469-beta2" // Reemplaza con la última versión del NDK que desees usar
+    ndkVersion "25.1.8937393" // Reemplaza con la última versión del NDK que desees usar
     namespace 'com.kyhsgeekcode.disassembler'
 
     packagingOptions {
