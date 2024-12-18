@@ -25,9 +25,9 @@ jobs:
 
       - name: Setup Android NDK
         run: |
-          wget https://dl.google.com/android/repository/android-ndk-r28-beta2-linux.zip
-          unzip android-ndk-r28-beta2-linux.zip
-          export ANDROID_NDK_HOME=$PWD/android-ndk-r28-beta2
+          wget https://dl.google.com/android/repository/android-ndk-r25c-linux.zip
+          unzip android-ndk-r25c-linux.zip
+          export ANDROID_NDK_HOME=$PWD/android-ndk-r25c
           export PATH=$PATH:$ANDROID_NDK_HOME/toolchains/llvm/prebuilt/linux-x86_64/bin
 
       - name: Build Release APK
